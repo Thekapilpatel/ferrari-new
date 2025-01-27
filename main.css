@@ -1,0 +1,855 @@
+/* -------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+
+  letter-spacing: 1px;
+
+  font-family: "Exo 2", serif;
+
+  font-optical-sizing: auto;
+
+  /* font-size: 11px; */
+  font-stretch: ultra-condensed;
+
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+}
+
+html{
+  scroll-behavior: smooth;
+ 
+}
+
+/* person div */
+.div-person{
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 2;
+
+}
+
+/* nav ----------------------------------------*/
+
+
+        
+
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #060606;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+
+.navbar .logo img {
+  height: 70px;
+}
+
+
+.navbar .nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+/* Links */
+.navbar .nav-links li {
+  margin: 0 15px;
+}
+
+.navbar .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  color: #ff9800;
+}
+
+/* Menu toggle icon (hidden by default) */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hidden checkbox for toggle */
+.menu-toggle {
+  display: none;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+      /* flex-direction: column; */
+      display: none;
+      background-color: #000000;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 10px 0;
+      
+  }
+    .menu-toggle:checked~ .nav-links{
+      display: block;
+      padding: 20px;
+    }
+    .menu-toggle:checked~ .nav-links  li{
+      padding-bottom: 20px;
+    }
+   
+    
+
+  .menu-icon {
+      display: block;
+  }
+}
+  
+
+/* ---------------header--------------- */
+
+         /* video styling */
+         #background-video {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%; /* Ensures it covers the entire screen */
+          object-fit: cover;
+          z-index: -1;
+      }
+
+      
+      .herosection {
+          display: flex;
+          justify-content: center;
+          align-items: end;
+          text-align: center;
+          color: white;
+          height: 90vh; 
+          padding: 0 20px;
+
+      }
+
+      .herosection .content {
+          max-width: 800px;
+          margin-bottom: 40px;
+      }
+
+      .herosection #upper {
+          font-size: 18px;
+          letter-spacing: 2px;
+          margin-bottom: 10px;
+      }
+
+      .herosection h1 {
+          font-size: 48px;
+          margin: 10px 0;
+      }
+
+      .herosection #lower {
+          font-size: 16px;
+          margin-top: 10px;
+      }
+
+      .herosection a {
+          color: white;
+          text-decoration: none;
+      }
+
+      .herosection .fa-chevron-right {
+          font-size: 20px;
+      }
+
+
+      .content-section {
+          padding: 50px;
+          text-align: center;
+          
+
+          background: #f4f4f4;
+      }
+
+
+      @media (max-width: 768px) {
+          .herosection #upper {
+              font-size: 14px;
+          }
+
+          .herosection h1 {
+              font-size: 32px;
+          }
+
+          .herosection #lower {
+              font-size: 14px;
+          }
+
+          .herosection .fa-chevron-right {
+              font-size: 16px;
+          }
+
+          .content-section {
+              padding: 30px;
+          }
+      }
+
+      @media (max-width: 480px) {
+          .herosection h1 {
+              font-size: 24px;
+          }
+
+          .herosection #upper {
+              font-size: 12px;
+          }
+
+          .herosection #lower {
+              font-size: 12px;
+          }
+
+          .herosection .fa-chevron-right {
+              font-size: 14px;
+          }
+
+          .content-section {
+              padding: 20px;
+          }
+     
+        }
+
+/* section 2 ----------––------------------------------------ */
+
+/* General Styling */
+.section-2 {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 90px;
+  margin-bottom: 10px;
+}
+
+.sec2-content {
+  max-width: 600px; 
+  margin-right: 20px;
+  
+}
+
+.sec2-content .heading {
+  font-weight: 700;
+  font-size: 24px; 
+  padding-bottom: 30px;
+}
+
+.sec2-content .pera {
+  line-height: 1.8; 
+  font-size: 16px; 
+  color: #333; 
+}
+
+
+.sec2-content .pera::first-letter {
+  color: red;
+  font-size: 30px;
+}
+
+/* Link Styling */
+#sec2-pera-link {
+  font-size: 18px;
+}
+
+#sec2-pera-link a {
+  text-decoration: none;
+  color: #ff0000; 
+}
+
+#sec2-pera-link a .fa-chevron-right {
+  font-size: 18px;
+  transition: transform 0.3s;
+}
+
+#sec2-pera-link a:hover .fa-chevron-right {
+  transform: translateX(5px);
+}
+
+/* Image Styling */
+.sec2-img img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .section-2 {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .sec2-content .heading {
+      font-size: 22px; 
+  }
+
+  .sec2-content .pera {
+      font-size: 14px; 
+  }
+
+  .sec2-img img {
+    margin: 20px;
+      max-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec2-content .heading {
+      font-size: 20px;
+  }
+
+  .sec2-content .pera {
+      font-size: 12px; 
+  }
+
+  #sec2-pera-link {
+      font-size: 16px;
+  }
+
+  .sec2-img img {
+      max-height: 300px; 
+  }
+}
+
+
+/* section 3 ----------––-------------------------------- */
+
+.sec-3 {
+  display: grid;
+  background-color: white;
+  height: 1200px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  color: white;
+  padding: 20px;
+}
+
+.sec-3-inner-content p a {
+  color: red;
+  text-decoration: none;
+}
+
+.sec-3-div-1, .sec-3-div-2, .sec-3-div-3, .sec-3-div-4, .sec-3-div-5, .sec-3-div-6 {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.sec-3-inner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sec-3-inner-content p, h1 {
+  line-height: 50px;
+  font-size: 20px;
+}
+
+.sec-3-inner-content h1 {
+  font-size: 30px;
+}
+
+/* Background images */
+
+.sec-3-div-1 {
+    background-image: url('https://i.pinimg.com/736x/a6/9c/7f/a69c7f862c1e60c44b768a3c7afb8dac.jpg'); 
+  }
+  
+  .sec-3-div-2 {
+      background-image: url('https://images.unsplash.com/photo-1672598593564-dea0a73a09d5?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZmVycmFyaSUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D'); 
+  }
+  
+  .sec-3-div-3 {
+      background-image: url('https://media.cnn.com/api/v1/images/stellar/prod/200918141328-01-ferrari-f8-spider.jpg?q=w_1110,c_fill'); 
+  }
+  
+  .sec-3-div-4 {
+      background-image: url('https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i70.Jgjzx_Dc/v1/-1x-1.webp'); 
+  }
+  
+  .sec-3-div-5 {
+      background-image: url('https://www.shutterstock.com/image-photo/16-charles-leclerc-scuderia-ferrari-260nw-2494443799.jpg'); 
+  }
+  
+  .sec-3-div-6 {
+      background-image: url('https://www.carandbike.com/_next/image?url=https%3A%2F%2Fimages.carandbike.com%2Fcar-images%2Fbig%2Fferrari%2Fportofino%2Fferrari-portofino.jpg%3Fv%3D30&w=3840&q=75'); 
+  }
+  
+.sec-3-div-1:hover, .sec-3-div-2:hover, .sec-3-div-3:hover, .sec-3-div-4:hover, .sec-3-div-5:hover, .sec-3-div-6:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 768px) {
+  .sec-3 {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto auto;
+      gap: 15px;
+  }
+
+  .sec-3-inner-content h1 {
+      font-size: 24px;
+  }
+
+  .sec-3-inner-content p {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec-3-inner-content h1 {
+      font-size: 20px;
+  }
+
+  .sec-3-inner-content p {
+      font-size: 12px;
+  }
+}
+
+
+
+
+/* <!-- FOOTER ------------------------------- --> */
+footer {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  background-color: #181818;
+}
+
+/* Subscribe Section */
+.subscribe {
+  text-align: center;
+  background-color: #303030;
+  color: white;
+  padding: 50px 0;
+}
+
+.subscribe-btn {
+  padding: 15px 80px;
+ 
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  background-color: rgb(217, 41, 28);
+  color: white;
+  font-size: 25px;
+  border: none;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+/* Main Content - Footer Links */
+
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 30px 120px;
+  background-color: #181818;
+  color: white;
+}
+/* ------------------------- */
+
+/* main content - footer links */
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 30px 120px;
+  background-color: #181818;
+  color: white;
+}
+
+.main-content div {
+  line-height: 40px;
+}
+
+.main-content div p a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.main-content div p a:hover {
+  color: rgb(217, 41, 28); 
+}
+
+.footer-upper-font {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    grid-template-columns: 1fr; 
+    padding: 20px; 
+  }
+
+  .main-content div {
+    margin-bottom: 30px; 
+  }
+
+  .main-content div p a {
+    font-size: 16px; 
+  }
+}
+
+/* ------------------------------------------------------ */
+
+
+/* all links Section */
+/* all links ------- Footer --------Social Links */
+.all-links {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px; 
+  padding: 32px;
+  padding-top: 50px;
+  padding-left: 180px;
+  padding-right: 100px;
+  background-color: #181818;
+  color: white;
+  font-size: 11px;
+}
+
+.all-links div {
+  border: none;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center; 
+}
+
+.all-links div i {
+  font-size: 16px;
+  margin-right: 10px; 
+}
+
+
+@media (max-width: 768px) {
+  .all-links {
+    grid-template-columns: 1fr 1fr; 
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .all-links div {
+    margin-bottom: 15px; 
+  }
+
+  .all-links div i {
+    font-size: 18px;
+  }
+
+  .all-links div {
+    font-size: 14px; 
+  }
+}
+
+/* Random Text Section */
+.random-text {
+  padding: 50px;
+  background-color: #181818;
+  color: rgb(145, 138, 138);
+  text-align: center;
+}
+
+.inside-random p {
+  line-height: 20px;
+}
+
+.upper-random {
+  padding-bottom: 10px;
+}
+
+.middle-random {
+  padding-bottom: 10px;
+}
+
+
+
+/* Legal Section------------------------------------------ */
+.legal-things .legal-content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 60px 140px;
+  background-color: #303030;
+  color: white;
+}
+
+.legal-things .legal-content div {
+  font-size: 11px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+
+.logo-end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #181818;
+  overflow: hidden;
+}
+
+.logo-end img {
+  height: 100px;
+}
+
+
+@media (max-width: 768px) {
+  .legal-things .legal-content {
+    grid-template-columns: repeat(2, 1fr); 
+    padding: 30px 20px; 
+  }
+
+  .legal-things .legal-content div {
+    font-size: 14px; 
+    padding: 8px;
+  }
+
+  .logo-end img {
+    height: 80px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .legal-things .legal-content {
+    grid-template-columns: 1fr; 
+    padding: 20px 10px; 
+  }
+
+  .legal-things .legal-content div {
+    font-size: 12px;
+    padding: 6px; 
+  }
+
+  .logo-end img {
+    height: 60px; 
+  }
+}
+
+
+.logo-end img {
+  height: 100px;
+}
+
+
+/* -------------history.html ------------------------- */
+
+
+.his-content h1 {
+  color: rgb(152, 9, 9);
+  font-size: 36px;
+}
+.his-content  h2 {
+  color: black;
+  font-size: 30px;
+}
+.his-content  h3 {
+  color: black;
+  font-size: 24px;
+}
+.his-content  p {
+  font-size: 16px;
+  color: rgb(49, 49, 49);
+}
+.his-content {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  margin-top: 200px;
+  margin-bottom: 200px;
+  
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.183);
+}
+
+@media (max-width: 1200px){
+
+  .his-content{
+  
+      margin-left: 30px ;
+      margin-right: 30px;
+    }
+  }
+
+/* ------------------news page h  ------------------- */
+.news {
+  display: grid;
+  background-color: white;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-rows: auto;
+  gap: 20px;
+  color: rgb(3, 2, 2);
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+  height: auto;
+}
+
+.news-img-1, .news-img-2, .news-img-3, .news-img-4, .news-img-5, .news-img-6, .news-img-7, .news-img-8, .news-img-9, .news-img-10, .news-img-11, .news-img-12 {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.news-block {
+  height: 400px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+
+
+/* background imges link */
+
+.news-img-1 { 
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFCoUyRJkOa1d5j2CLx2jIIlVhckUdzZxx_JtQqGaW3VxN4MH0VK3jgrTwJiZn4O2Apcg&usqp=CAU'); 
+}
+
+
+.news-img-2 { 
+  background-image: url('https://www.reuters.com/resizer/v2/5DQY6OO7C5PIPJGT3ZYLQJFDPQ.jpg?auth=cb8d3d37dfbab5830783774173d2069698c8f3032e39bc61e347615f105aeac5&width=3637&quality=80'); 
+}
+
+
+.news-img-3 { 
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPL1-j1tAvfpMmUdGVelwC0EpVP7XZo3agsQ&s'); 
+}
+
+
+.news-img-4 { 
+  background-image: url('https://d2n9h2wits23hf.cloudfront.net/image/v1/static/6057949432001/8e261fbd-c857-4f21-bf08-4f57c97356ca/05a31e18-65de-4588-af0b-c7201b81bd6f/432x243/match/image.jpg'); 
+}
+
+
+.news-img-5 { 
+  background-image: url('https://cdn.ferrari.com/cms/network/media/img/resize/663e0a4ca2a99900110ac425-ferrari-esports-scuderia-team-constructor-title-2024-news-ed--desk?width=830&height=0'); 
+}
+
+
+.news-img-6 { 
+  background-image: url('https://www.si.com/.image/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/MjAyMjcyNjU4NjczMzc4Mzcy/f_hs3o4xqaap7qa.jpg'); 
+}
+
+
+.news-img-7 { 
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqNBZdiPJKKyHGpztPxt5SbHOU8vgVkamN3w&s'); 
+}
+
+
+.news-img-8 { 
+  background-image: url('https://bna-media.s3-eu-west-1.amazonaws.com/Media/Images/News/Sports-News/Screenshot%202023-02-14%20222441-ece6babe-eb76-499f-97c0-c209e5fc2626.jpeg'); 
+}
+
+
+.news-img-9 { 
+  background-image: url('https://image-cdn.essentiallysports.com/wp-content/uploads/20200321001647/ferrari-laferrari-finished-cars-wide.jpg?width=600'); 
+}
+
+
+.news-img-10 { 
+  background-image: url('https://media.istockphoto.com/id/1210172689/photo/view-of-the-scuderia-ferrari-sign-at-the-entrance-of-the-ferrari-formula-1-department-in.jpg?s=612x612&w=0&k=20&c=tgGeIyEO67Z6QN8nP58LnVYZCHuTMJiuFfjiQQCO_NE='); 
+}
+
+
+.news-img-11 { 
+  background-image: url('https://i.ytimg.com/vi/bLfFITaKirU/hqdefault.jpg'); 
+}
+
+
+.news-img-12 { 
+  background-image: url('https://hips.hearstapps.com/hmg-prod/images/the-ferrari-team-applaud-as-sebastian-vettel-of-germany-news-photo-1607985372.?crop=1xw:0.82581xh;center,top&resize=1200:*'); 
+}
+
+
+@media (min-width: 768px) {
+  .news {
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 40px;
+  }
+
+  .news-img-1, .news-img-2, .news-img-3, .news-img-4, .news-img-5, .news-img-6 {
+    height: 200px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .news {
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .news-img-1, .news-img-2, .news-img-3, .news-img-4, .news-img-5, .news-img-6 {
+    height: 180px;
+  }
+
+  .news-block {
+    height: 350px;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .news {
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+    gap: 10px;
+    padding: 10px;
+  
+  }
+
+  .news-img-1, .news-img-2, .news-img-3, .news-img-4, .news-img-5, .news-img-6 {
+    height: 150px;
+  }
+
+  .news-block {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+
+.news-h1{
+  text-align: center;
+  font-size: 50px;
+  margin: 20px;
+}
